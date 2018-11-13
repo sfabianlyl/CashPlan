@@ -1,8 +1,8 @@
 <?php
-    include 'dbconn.php';
-    $username=$_COOKIE['User'];
-    $sql="select * from `user` where `user_name`='$username';";
-    $conn->query($sql);
+    // include 'dbconn.php';
+    // $username=$_COOKIE['User'];
+    // $sql="select * from `user` where `user_name`='$username';";
+    // $conn->query($sql);
 ?>
 
 
@@ -10,9 +10,27 @@
 <html>
     <head>
         <style>
-            .section{
+            .left-section{
+                width:27%;
+                display:block;
+                float:left;
+                height:90%;
+                border:1px red dotted;
+                padding-top:5%;
+            }
+            
+            .left-section table{
+                width:90%;
+            }
+            .left-section tr:first-child td:first-child{
+                text-align:center;
+            }
+            .left-section tr,td{
+                padding:2%;
+            }
+            .right-section{
                 width:70%;
-                height:70%;
+                height:90%;
                 display:block;
                 float:right;
                 border:1px black solid;
@@ -43,30 +61,54 @@
                 margin-left:5%;
                 /* padding-left:7%; */
             }
-            td{
+            .card-content td{
                 padding:2%;
             }
-            td:first-child{
+            .card-content td:first-child{
                 width:50%;
             }
-            td:nth-child(2){
+            .card-content td:nth-child(2){
                 width:25%;
             }
-            td:nth-child(3){
+            .card-content td:nth-child(3){
                 width:25%;
             }
-            tr:nth-child(odd){
+            .card-content tr:nth-child(odd){
                 background-color:#EEEEEE;
 
             }
-            tr:nth-child(even){
+            .card-content tr:nth-child(even){
                 background-color:#FFFFFF;
                 
             }
         </style>
     </head>
     <body>
-        <div class="section">
+        <div class="left-section">
+            <table>
+                <tr>
+                    <td colspan='2'>Card Details</td>
+                </tr>
+                <tr>
+                    <td>Card Number: </td>
+                    <td>184791</td>
+                </tr>
+                <tr>
+                    <td>Name: </td>
+                    <td>Fabian Lee Yun Lee</td>
+                </tr>
+                <tr>
+                    <td>Faculty: </td>
+                    <td>Engineering</td>
+                </tr>
+                <tr>
+                    <td>Year: </td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="right-section">
             <div class="card">
                 <div class="card-header" onclick="displayContent()">
                     Card Balance:       <span>RM43.00</span>
