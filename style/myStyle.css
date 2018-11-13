@@ -1,0 +1,31 @@
+.login-box{
+    border:1px black solid;
+    border-style:onset;
+    border-radius:5px;
+    background-color:white;
+    height:40vh;
+    width:30vw;
+    position:fixed;
+    top:30%;
+    left:50%;
+    margin-top:-20vh;
+    margin-left:-15vw;
+    opacity:0;
+    transition:opacity 1s, top 0.5s;
+}
+
+.form-table tr{
+    margin:2vw;
+    padding:2vh;
+    width:100%;
+}
+.form-table td{
+    
+    padding:2vh;
+    width:100%;
+}
+.form-table{
+    
+    padding:2vh;
+    text-align:center;
+}
